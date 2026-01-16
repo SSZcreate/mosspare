@@ -10,7 +10,7 @@
 
 .SP .mask-group {
   position: absolute;
-  top: 2852px;
+  top: 2900px;
   left: 50%;
   transform: translateX(-50%);
   width: 375px;
@@ -20,7 +20,7 @@
 
 .SP .image {
   position: absolute;
-  top: 2697px;
+  top: 2750px;
   left: 50%;
   transform: translateX(-50%);
   width: 302px;
@@ -547,8 +547,9 @@
 
 .SP .text-wrapper-11 {
   position: absolute;
-  top: 2665px;
-  left: calc(50% - 107px);
+  top: 2710px;
+  left: calc(50% - 145px);
+  width: 80px;
   height: 28px;
   display: flex;
   align-items: center;
@@ -565,8 +566,9 @@
 
 .SP .text-wrapper-12 {
   position: absolute;
-  top: 2665px;
-  left: calc(50% + 51px);
+  top: 2710px;
+  left: calc(50% + 50px);
+  width: 100px;
   height: 28px;
   display: flex;
   align-items: center;
@@ -583,8 +585,8 @@
 
 .SP .text-wrapper-13 {
   position: absolute;
-  top: 2813px;
-  left: calc(50% + 130px);
+  top: 2870px;
+  left: calc(50% + 120px);
   height: 28px;
   display: flex;
   align-items: center;
