@@ -2,60 +2,70 @@
   background-color: #000000;
   overflow: hidden;
   width: 100%;
-  min-width: 375px;
+  max-width: 100vw;
   min-height: 4545px;
   position: relative;
+  margin: 0 auto;
 }
 
 .SP .mask-group {
   position: absolute;
   top: 2852px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 375px;
+  max-width: 100%;
   height: 96px;
 }
 
 .SP .image {
   position: absolute;
   top: 2697px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 302px;
-  height: 310px;
+  max-width: 80%;
+  height: auto;
   aspect-ratio: 1.01;
 }
 
 .SP .keyvisu-wrapper {
   top: 0;
-  left: 1px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-180.00deg);
   height: 491px;
   display: flex;
-  transform: rotate(-180.00deg);
   position: absolute;
-  width: 375px;
+  width: 100%;
+  max-width: 375px;
 }
 
 .SP .keyvisu {
   margin-top: 0;
-  width: 375px;
+  width: 100%;
   height: 490.66px;
   margin-left: 0;
   transform: rotate(180.00deg);
-  aspect-ratio: 0.76;
+  object-fit: cover;
 }
 
 .SP .grassdsss {
   top: 453px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   height: 76px;
   aspect-ratio: 4.93;
   position: absolute;
-  width: 375px;
+  width: 100%;
+  max-width: 375px;
 }
 
 .SP .text-wrapper {
   position: absolute;
   top: 628px;
-  left: 145px;
+  left: 0;
+  right: 0;
+  width: 100%;
   font-family: "Labrada", Helvetica;
   font-weight: 700;
   color: #ffffff;
@@ -69,8 +79,10 @@
 .SP .moss-palace-parade {
   position: absolute;
   top: 677px;
-  left: 32px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 305px;
+  max-width: calc(100% - 64px);
   font-size: 16px;
   text-align: center;
   letter-spacing: 0.64px;
@@ -80,28 +92,49 @@
   line-height: normal;
 }
 
+.SP .youtube-embed {
+  position: absolute;
+  top: 750px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 375px;
+  aspect-ratio: 16/9;
+}
+
+.SP .youtube-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 .SP .vector {
   position: absolute;
   top: 653px;
-  left: 50px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 275px;
+  max-width: calc(100% - 100px);
   height: 1px;
 }
 
 .SP .element {
   position: absolute;
-  top: 775px;
-  left: 1px;
-  width: 373px;
-  height: 210px;
+  top: 730px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 375px;
+  height: auto;
   aspect-ratio: 1.78;
   object-fit: cover;
 }
 
 .SP .logos-youtube-icon {
   position: absolute;
-  top: 864px;
-  left: 164px;
+  top: 830px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 45px;
   height: 31px;
   aspect-ratio: 1.42;
@@ -119,9 +152,11 @@
 
 .SP .group {
   position: absolute;
-  top: calc(50.00% - 4515px);
-  left: calc(50.00% - 155px);
+  top: 960px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 305px;
+  max-width: calc(100% - 64px);
   height: 62px;
   background-color: #ffffff;
   border-radius: 47.25px;
@@ -181,20 +216,26 @@
 .SP .image-2 {
   position: absolute;
   top: 1590px;
-  left: 1px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 375px;
+  max-width: 100%;
   height: 207px;
   aspect-ratio: 1.81;
 }
 
 .SP .text-wrapper-3 {
   position: absolute;
-  top: 1176px;
-  left: 36px;
+  top: 1200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 311px;
+  max-width: calc(100% - 64px);
   font-family: "Labrada", Helvetica;
   font-weight: 700;
   color: #ffffff;
   font-size: 24px;
+  text-align: left;
   letter-spacing: 4.80px;
   line-height: 11.3px;
   white-space: nowrap;
@@ -203,11 +244,15 @@
 .SP .text-wrapper-4 {
   position: absolute;
   top: 3094px;
-  left: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 311px;
+  max-width: calc(100% - 64px);
   font-family: "Labrada", Helvetica;
   font-weight: 700;
   color: #ffffff;
   font-size: 24px;
+  text-align: left;
   letter-spacing: 4.80px;
   line-height: 11.3px;
   white-space: nowrap;
@@ -216,11 +261,15 @@
 .SP .text-wrapper-5 {
   position: absolute;
   top: 1903px;
-  left: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 311px;
+  max-width: calc(100% - 64px);
   font-family: "Labrada", Helvetica;
   font-weight: 700;
   color: #ffffff;
   font-size: 24px;
+  text-align: left;
   letter-spacing: 4.80px;
   line-height: 11.3px;
   white-space: nowrap;
@@ -229,11 +278,15 @@
 .SP .text-wrapper-6 {
   position: absolute;
   top: 2305px;
-  left: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 311px;
+  max-width: calc(100% - 64px);
   font-family: "Labrada", Helvetica;
   font-weight: 700;
   color: #ffffff;
   font-size: 24px;
+  text-align: left;
   letter-spacing: 4.80px;
   line-height: 11.3px;
   white-space: nowrap;
@@ -241,33 +294,41 @@
 
 .SP .vector-4 {
   position: absolute;
-  top: 1202px;
-  left: 32px;
-  width: 276px;
+  top: 1226px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 311px;
+  max-width: calc(100% - 64px);
   height: 1px;
 }
 
 .SP .vector-5 {
   position: absolute;
   top: 3120px;
-  left: 32px;
-  width: 276px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 311px;
+  max-width: calc(100% - 64px);
   height: 1px;
 }
 
 .SP .vector-6 {
   position: absolute;
   top: 1929px;
-  left: 32px;
-  width: 276px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 311px;
+  max-width: calc(100% - 64px);
   height: 1px;
 }
 
 .SP .vector-7 {
   position: absolute;
   top: 2331px;
-  left: 32px;
-  width: 276px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 311px;
+  max-width: calc(100% - 64px);
   height: 1px;
 }
 
@@ -275,11 +336,13 @@
   display: flex;
   flex-direction: column;
   width: 311px;
+  max-width: calc(100% - 64px);
   align-items: flex-start;
   gap: 25.6px;
   position: absolute;
-  top: 1226px;
-  left: 32px;
+  top: 1250px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .SP .frame-3 {
@@ -375,11 +438,13 @@
   display: flex;
   flex-direction: column;
   width: 311px;
+  max-width: calc(100% - 64px);
   align-items: flex-start;
   gap: 25.6px;
   position: absolute;
   top: 3144px;
-  left: 32px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .SP .group-6 {
@@ -415,8 +480,10 @@
 .SP .text-wrapper-9 {
   position: absolute;
   top: 1952px;
-  left: 36px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 307px;
+  max-width: calc(100% - 64px);
   font-family: "Kaisotai-NextUP B", "Kaisotai-Regular", Helvetica, sans-serif;
   font-weight: 400;
   color: #ffffff;
@@ -428,8 +495,10 @@
 .SP .text-wrapper-10 {
   position: absolute;
   top: 2355px;
-  left: 36px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 307px;
+  max-width: calc(100% - 64px);
   font-family: "Kaisotai-NextUP B", "Kaisotai-Regular", Helvetica, sans-serif;
   color: #ffffff;
   font-size: 13px;
@@ -441,23 +510,27 @@
 .SP .group-10 {
   position: absolute;
   width: 375px;
+  max-width: 100%;
   height: 194px;
   top: 2006px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .SP .mask-group-2 {
   top: 2523px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   height: 96px;
   position: absolute;
   width: 375px;
+  max-width: 100%;
 }
 
 .SP .image-3 {
   position: absolute;
   top: 2390px;
-  left: 81px;
+  left: calc(50% - 107px);
   width: 105px;
   height: 289px;
   aspect-ratio: 0.27;
@@ -466,7 +539,7 @@
 .SP .image-4 {
   position: absolute;
   top: 2395px;
-  left: 11px;
+  left: calc(50% - 177px);
   width: 112px;
   height: 284px;
   aspect-ratio: 0.3;
@@ -475,7 +548,7 @@
 .SP .text-wrapper-11 {
   position: absolute;
   top: 2665px;
-  left: 81px;
+  left: calc(50% - 107px);
   height: 28px;
   display: flex;
   align-items: center;
@@ -493,7 +566,7 @@
 .SP .text-wrapper-12 {
   position: absolute;
   top: 2665px;
-  left: 239px;
+  left: calc(50% + 51px);
   height: 28px;
   display: flex;
   align-items: center;
@@ -511,7 +584,7 @@
 .SP .text-wrapper-13 {
   position: absolute;
   top: 2813px;
-  left: 296px;
+  left: calc(50% + 130px);
   height: 28px;
   display: flex;
   align-items: center;
@@ -529,7 +602,7 @@
 .SP .image-5 {
   position: absolute;
   top: 2477px;
-  left: 244px;
+  left: calc(50% + 56px);
   width: 129px;
   height: 196px;
   aspect-ratio: 0.58;
@@ -538,7 +611,7 @@
 .SP .image-6 {
   position: absolute;
   top: 2457px;
-  left: 176px;
+  left: calc(50% - 12px);
   width: 114px;
   height: 216px;
   aspect-ratio: 0.43;
@@ -583,15 +656,18 @@
 .SP .group-12 {
   position: absolute;
   top: 4220px;
-  left: 32px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 311px;
+  max-width: calc(100% - 64px);
   height: 32px;
 }
 
 .SP .vector-9 {
   position: absolute;
   top: 4191px;
-  left: 139px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 91px;
   height: 91px;
 }
@@ -600,11 +676,13 @@
   display: flex;
   flex-direction: column;
   width: 311px;
+  max-width: calc(100% - 64px);
   align-items: flex-start;
   gap: 15px;
   position: absolute;
   top: 4312px;
-  left: 32px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .SP .div-wrapper {
@@ -653,11 +731,13 @@
   display: flex;
   flex-direction: column;
   width: 311px;
+  max-width: calc(100% - 64px);
   align-items: flex-start;
   gap: 15px;
   position: absolute;
   top: 4412px;
-  left: 32px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .SP .group-13 {
@@ -672,19 +752,14 @@
   font-family: "Kaisotai-NextUP B", "Kaisotai-Regular", Helvetica, sans-serif;
   color: #000000;
   font-size: 13px;
-  line-height: normal;
+  line-height: 22px;
   text-decoration: underline;
   font-weight: 400;
   letter-spacing: 0;
 }
 
 .SP .ooui-new-window-ltr-2 {
-  position: absolute;
-  top: 4442px;
-  left: 88px;
-  width: 14px;
-  height: 13px;
-  aspect-ratio: 1;
+  display: none;
 }
 
 .SP .vector-10 {
@@ -704,27 +779,48 @@
 }
 
 .SP .ooui-new-window-ltr-3 {
-  position: absolute;
-  top: 4462px;
-  left: 88px;
-  width: 14px;
-  height: 13px;
-  aspect-ratio: 1;
+  display: none;
 }
 
 .SP .ooui-new-window-ltr-4 {
-  position: absolute;
-  top: 4342px;
-  left: 125px;
+  display: none;
+}
+
+.SP .inline-icon {
+  display: inline-block;
   width: 14px;
   height: 13px;
-  aspect-ratio: 1;
+  position: relative;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.SP .inline-icon img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.SP .inline-icon img:first-child {
+  width: 90%;
+  height: 90%;
+  top: 5%;
+  left: 5%;
+}
+
+.SP .inline-icon img:last-child {
+  width: 52%;
+  height: 52%;
+  top: 5%;
+  left: 43%;
 }
 
 .SP .text-wrapper-17 {
   position: absolute;
   top: 4523px;
-  left: 133px;
+  left: 0;
+  right: 0;
+  width: 100%;
   font-family: "Kaisotai-NextUP B", "Kaisotai-Regular", Helvetica, sans-serif;
   font-weight: 400;
   color: #000000;
@@ -737,9 +833,11 @@
 
 .SP .frame-wrapper {
   position: absolute;
-  top: 1007px;
-  left: 32px;
+  top: 1042px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 311px;
+  max-width: calc(100% - 64px);
   height: 63px;
   background-color: #ffffff;
   border-radius: 48.05px;
@@ -782,7 +880,8 @@
 .SP .group-14 {
   position: absolute;
   top: 530px;
-  left: 69px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 232px;
   height: 31px;
 }
@@ -790,7 +889,8 @@
 .SP .vector-12 {
   position: absolute;
   top: 352px;
-  left: 103px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 166px;
   height: 166px;
 }
@@ -1605,24 +1705,26 @@
 }
 
 .SP .element-2 {
+  display: none;
+}
+
+.SP .logos-youtube-icon-2 {
+  display: none;
+}
+
+.SP.PC .youtube-embed-pc {
   position: absolute;
   top: 1526px;
   left: 209px;
   width: 994px;
   height: 559px;
-  aspect-ratio: 1.78;
-  object-fit: cover;
 }
 
-.SP .logos-youtube-icon-2 {
-  position: absolute;
-  top: 1761px;
-  left: 632px;
-  width: 118px;
-  height: 83px;
-  aspect-ratio: 1.42;
-  background-image: url(./img/vector-41.svg);
-  background-size: 100% 100%;
+.SP.PC .youtube-embed-pc iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
 }
 
 .SP .group-30 {
@@ -2022,54 +2124,39 @@ a:hover {
   }
 }
 
-/* スクロールアニメーション用クラス */
-.animate-on-scroll {
+/* ===== スマホ版アニメーション（レイアウト崩れ防止） ===== */
+
+/* スクロールアニメーション - opacityのみでフェードイン */
+.SP .animate-on-scroll {
   opacity: 0;
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition: opacity 0.8s ease-out;
 }
 
-.animate-on-scroll.fade-in-up {
-  transform: translateY(40px);
-}
-
-.animate-on-scroll.fade-in-left {
-  transform: translateX(-40px);
-}
-
-.animate-on-scroll.fade-in-right {
-  transform: translateX(40px);
-}
-
-.animate-on-scroll.scale-in {
-  transform: scale(0.9);
-}
-
-.animate-on-scroll.visible {
+.SP .animate-on-scroll.visible {
   opacity: 1;
-  transform: translateY(0) translateX(0) scale(1);
 }
+
+/* 遅延クラス */
+.SP .animate-delay-1 { transition-delay: 0.1s; }
+.SP .animate-delay-2 { transition-delay: 0.2s; }
+.SP .animate-delay-3 { transition-delay: 0.3s; }
+.SP .animate-delay-4 { transition-delay: 0.4s; }
+.SP .animate-delay-5 { transition-delay: 0.5s; }
 
 /* 初期ロードアニメーション */
 .SP .keyvisu,
-.SP .keyvisu-2,
-.SP.PC .keyvisu-2 {
+.SP .keyvisu-2 {
   animation: fadeIn 1.5s ease-out forwards;
 }
 
-.SP .navbar,
-.SP.PC .navbar {
-  animation: fadeIn 1s ease-out 0.5s backwards;
-}
-
-/* ホバーエフェクト - ボタン */
+/* ホバーエフェクト - ボタン（box-shadowのみ使用） */
 .SP .group,
-.SP.PC .group-15 {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.SP .frame-wrapper {
+  transition: box-shadow 0.3s ease;
 }
 
 .SP .group:hover,
-.SP.PC .group-15:hover {
-  transform: translateY(-3px);
+.SP .frame-wrapper:hover {
   box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
 }
 
@@ -2077,37 +2164,23 @@ a:hover {
 .SP .image-3,
 .SP .image-4,
 .SP .image-5,
-.SP .image-6,
-.SP.PC .image-8,
-.SP.PC .image-9,
-.SP.PC .image-10,
-.SP.PC .image-11,
-.SP.PC .image-12 {
-  transition: transform 0.4s ease, filter 0.4s ease;
+.SP .image-6 {
+  transition: filter 0.4s ease;
 }
 
 .SP .image-3:hover,
 .SP .image-4:hover,
 .SP .image-5:hover,
-.SP .image-6:hover,
-.SP.PC .image-8:hover,
-.SP.PC .image-9:hover,
-.SP.PC .image-10:hover,
-.SP.PC .image-11:hover,
-.SP.PC .image-12:hover {
-  transform: scale(1.05);
+.SP .image-6:hover {
   filter: brightness(1.1);
 }
 
 /* ホバーエフェクト - YouTubeアイコン */
-.SP .logos-youtube-icon,
-.SP.PC .logos-youtube-icon {
-  transition: transform 0.3s ease, filter 0.3s ease;
+.SP .logos-youtube-icon {
+  transition: filter 0.3s ease;
 }
 
-.SP .logos-youtube-icon:hover,
-.SP.PC .logos-youtube-icon:hover {
-  transform: scale(1.15);
+.SP .logos-youtube-icon:hover {
   filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.5));
 }
 
@@ -2116,61 +2189,30 @@ a:hover {
 .SP .text-wrapper-3,
 .SP .text-wrapper-4,
 .SP .text-wrapper-5,
-.SP .text-wrapper-6,
-.SP.PC .text-wrapper-20,
-.SP.PC .text-wrapper-21,
-.SP.PC .text-wrapper-22,
-.SP.PC .text-wrapper-23 {
-  transition: text-shadow 0.3s ease, letter-spacing 0.3s ease;
+.SP .text-wrapper-6 {
+  transition: text-shadow 0.3s ease;
 }
 
 .SP .text-wrapper:hover,
 .SP .text-wrapper-3:hover,
 .SP .text-wrapper-4:hover,
 .SP .text-wrapper-5:hover,
-.SP .text-wrapper-6:hover,
-.SP.PC .text-wrapper-20:hover,
-.SP.PC .text-wrapper-21:hover,
-.SP.PC .text-wrapper-22:hover,
-.SP.PC .text-wrapper-23:hover {
+.SP .text-wrapper-6:hover {
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-  letter-spacing: 0.1em;
-}
-
-/* ナビゲーションリンクのアニメーション */
-.SP .text-wrapper-19 {
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-.SP .text-wrapper-19::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background-color: #ffffff;
-  transition: width 0.3s ease, left 0.3s ease;
-}
-
-.SP .text-wrapper-19:hover::after {
-  width: 100%;
-  left: 0;
 }
 
 /* マップ・ステージ画像のホバー */
-.SP .group-10,
-.SP.PC .frame-7 img {
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
+.SP .group-10 {
+  transition: box-shadow 0.5s ease;
 }
 
-.SP .group-10:hover,
-.SP.PC .frame-7 img:hover {
-  transform: scale(1.02);
+.SP .group-10:hover {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
+/* ===== PC版アニメーション ===== */
+
+/* 遅延アニメーション用ユーティリティ */
 /* 遅延アニメーション用ユーティリティ */
 .delay-100 { animation-delay: 0.1s; }
 .delay-200 { animation-delay: 0.2s; }
@@ -2183,13 +2225,77 @@ html {
   scroll-behavior: smooth;
 }
 
-/* 外部リンクアイコンのホバー */
-.SP .ooui-new-window-ltr,
+/* PC版追加アニメーション */
+.SP.PC .keyvisu-2 {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.SP.PC .navbar {
+  animation: fadeIn 1s ease-out 0.5s backwards;
+}
+
+.SP.PC .group-15 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.SP.PC .group-15:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+.SP.PC .image-8,
+.SP.PC .image-9,
+.SP.PC .image-10,
+.SP.PC .image-11,
+.SP.PC .image-12 {
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.SP.PC .image-8:hover,
+.SP.PC .image-9:hover,
+.SP.PC .image-10:hover,
+.SP.PC .image-11:hover,
+.SP.PC .image-12:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.SP.PC .logos-youtube-icon {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.SP.PC .logos-youtube-icon:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.5));
+}
+
+.SP.PC .text-wrapper-20,
+.SP.PC .text-wrapper-21,
+.SP.PC .text-wrapper-22,
+.SP.PC .text-wrapper-23 {
+  transition: text-shadow 0.3s ease;
+}
+
+.SP.PC .text-wrapper-20:hover,
+.SP.PC .text-wrapper-21:hover,
+.SP.PC .text-wrapper-22:hover,
+.SP.PC .text-wrapper-23:hover {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.SP.PC .frame-7 img {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.SP.PC .frame-7 img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
 .SP.PC .ooui-new-window-ltr {
   transition: transform 0.3s ease;
 }
 
-.SP .group:hover .ooui-new-window-ltr,
 .SP.PC .group-15:hover .ooui-new-window-ltr {
   transform: translateX(3px) translateY(-3px);
 }
