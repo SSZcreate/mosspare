@@ -1,0 +1,46 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Alegreya+SC:400|Labrada:700");
+
+/* Kaisotaiフォントの定義 */
+/* 注意: Adobe Fontsを使用する場合は、以下のコメントを外してプロジェクトURLを追加してください */
+/* <link rel="stylesheet" href="https://use.typekit.net/[YOUR_PROJECT_ID].css"> */
+
+/* フォントファイルを使用する場合 */
+@font-face {
+  font-family: "Kaisotai-NextUP B";
+  src: local("Kaisotai Next UP B"), 
+       local("Kaisotai-NextUP-B"),
+       local("Kaisotai-NextUPB"),
+       url("fonts/Kaisotai-Next-UP-B.woff2") format("woff2"),
+       url("fonts/Kaisotai-Next-UP-B.eot") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Kaisotai-Regularフォントファイルが存在する場合は、以下を有効化してください */
+@font-face {
+  font-family: "Kaisotai-Regular";
+  src: local("Kaisotai Regular"), 
+       local("Kaisotai-Regular"),
+       url("fonts/Kaisotai-Regular.woff2") format("woff2"),
+       url("fonts/Kaisotai-Regular.woff") format("woff"),
+       url("fonts/Kaisotai-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
