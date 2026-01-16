@@ -547,35 +547,35 @@
 .SP .group-11 {
   position: absolute;
   top: 4130px;
-  left: -243px;
-  width: 642px;
+  left: 0;
+  width: 100%;
   height: 415px;
 }
 
 .SP .grassdsss-2 {
   top: 0;
-  left: 243px;
+  left: 0;
   height: 48px;
-  aspect-ratio: 13.31;
   position: absolute;
-  width: 375px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .SP .grassdsss-3 {
-  top: 0;
-  left: 243px;
-  height: 48px;
+  bottom: 366px;
+  left: 0;
+  height: 50px;
   mix-blend-mode: color-dodge;
-  aspect-ratio: 13.31;
   position: absolute;
-  width: 375px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .SP .rectangle {
   position: absolute;
-  top: 46px;
-  left: 241px;
-  width: 378px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   height: 369px;
   background-color: #ffffff;
 }
@@ -1946,4 +1946,250 @@ a:hover {
     left: 50%;
     transform: translateX(-50%);
   }
+}
+
+/* ===== アニメーション ===== */
+
+/* キーフレーム定義 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* スクロールアニメーション用クラス */
+.animate-on-scroll {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.fade-in-up {
+  transform: translateY(40px);
+}
+
+.animate-on-scroll.fade-in-left {
+  transform: translateX(-40px);
+}
+
+.animate-on-scroll.fade-in-right {
+  transform: translateX(40px);
+}
+
+.animate-on-scroll.scale-in {
+  transform: scale(0.9);
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* 初期ロードアニメーション */
+.SP .keyvisu,
+.SP .keyvisu-2,
+.SP.PC .keyvisu-2 {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.SP .navbar,
+.SP.PC .navbar {
+  animation: fadeIn 1s ease-out 0.5s backwards;
+}
+
+/* ホバーエフェクト - ボタン */
+.SP .group,
+.SP.PC .group-15 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.SP .group:hover,
+.SP.PC .group-15:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+/* ホバーエフェクト - キャラクター画像 */
+.SP .image-3,
+.SP .image-4,
+.SP .image-5,
+.SP .image-6,
+.SP.PC .image-8,
+.SP.PC .image-9,
+.SP.PC .image-10,
+.SP.PC .image-11,
+.SP.PC .image-12 {
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.SP .image-3:hover,
+.SP .image-4:hover,
+.SP .image-5:hover,
+.SP .image-6:hover,
+.SP.PC .image-8:hover,
+.SP.PC .image-9:hover,
+.SP.PC .image-10:hover,
+.SP.PC .image-11:hover,
+.SP.PC .image-12:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* ホバーエフェクト - YouTubeアイコン */
+.SP .logos-youtube-icon,
+.SP.PC .logos-youtube-icon {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.SP .logos-youtube-icon:hover,
+.SP.PC .logos-youtube-icon:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.5));
+}
+
+/* セクションタイトルのホバー */
+.SP .text-wrapper,
+.SP .text-wrapper-3,
+.SP .text-wrapper-4,
+.SP .text-wrapper-5,
+.SP .text-wrapper-6,
+.SP.PC .text-wrapper-20,
+.SP.PC .text-wrapper-21,
+.SP.PC .text-wrapper-22,
+.SP.PC .text-wrapper-23 {
+  transition: text-shadow 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.SP .text-wrapper:hover,
+.SP .text-wrapper-3:hover,
+.SP .text-wrapper-4:hover,
+.SP .text-wrapper-5:hover,
+.SP .text-wrapper-6:hover,
+.SP.PC .text-wrapper-20:hover,
+.SP.PC .text-wrapper-21:hover,
+.SP.PC .text-wrapper-22:hover,
+.SP.PC .text-wrapper-23:hover {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.1em;
+}
+
+/* ナビゲーションリンクのアニメーション */
+.SP .text-wrapper-19 {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.SP .text-wrapper-19::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.SP .text-wrapper-19:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* マップ・ステージ画像のホバー */
+.SP .group-10,
+.SP.PC .frame-7 img {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.SP .group-10:hover,
+.SP.PC .frame-7 img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* 遅延アニメーション用ユーティリティ */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* スムーズなページ遷移 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 外部リンクアイコンのホバー */
+.SP .ooui-new-window-ltr,
+.SP.PC .ooui-new-window-ltr {
+  transition: transform 0.3s ease;
+}
+
+.SP .group:hover .ooui-new-window-ltr,
+.SP.PC .group-15:hover .ooui-new-window-ltr {
+  transform: translateX(3px) translateY(-3px);
 }

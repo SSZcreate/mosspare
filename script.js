@@ -128,3 +128,101 @@ if (mobileMenu) {
     }
   });
 }
+
+// ===== スクロールアニメーション =====
+function initScrollAnimations() {
+  // アニメーション対象要素を設定
+  const animationTargets = [
+    // スマホ版
+    { selector: '.SP.div .text-wrapper', class: 'fade-in-up' },
+    { selector: '.SP.div .text-wrapper-3', class: 'fade-in-up' },
+    { selector: '.SP.div .text-wrapper-4', class: 'fade-in-up' },
+    { selector: '.SP.div .text-wrapper-5', class: 'fade-in-up' },
+    { selector: '.SP.div .text-wrapper-6', class: 'fade-in-up' },
+    { selector: '.SP.div .frame-2', class: 'fade-in-up' },
+    { selector: '.SP.div .frame-4', class: 'fade-in-up' },
+    { selector: '.SP.div .group-10', class: 'scale-in' },
+    { selector: '.SP.div .image-3', class: 'fade-in-left' },
+    { selector: '.SP.div .image-4', class: 'fade-in-right' },
+    { selector: '.SP.div .image-5', class: 'fade-in-left' },
+    { selector: '.SP.div .image-6', class: 'fade-in-right' },
+    // PC版
+    { selector: '.SP.PC .text-wrapper-20', class: 'fade-in-up' },
+    { selector: '.SP.PC .text-wrapper-21', class: 'fade-in-up' },
+    { selector: '.SP.PC .text-wrapper-22', class: 'fade-in-up' },
+    { selector: '.SP.PC .text-wrapper-23', class: 'fade-in-up' },
+    { selector: '.SP.PC .frame-5', class: 'fade-in-up' },
+    { selector: '.SP.PC .frame-6', class: 'fade-in-up' },
+    { selector: '.SP.PC .frame-7', class: 'scale-in' },
+    { selector: '.SP.PC .image-8', class: 'fade-in-left' },
+    { selector: '.SP.PC .image-9', class: 'fade-in-right' },
+    { selector: '.SP.PC .image-10', class: 'fade-in-left' },
+    { selector: '.SP.PC .image-11', class: 'fade-in-right' },
+    { selector: '.SP.PC .image-12', class: 'fade-in-up' },
+  ];
+
+  // 各要素にアニメーションクラスを追加
+  animationTargets.forEach(target => {
+    const elements = document.querySelectorAll(target.selector);
+    elements.forEach(el => {
+      el.classList.add('animate-on-scroll', target.class);
+    });
+  });
+
+  // Intersection Observerでスクロール検知
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // 一度表示したら監視を解除（パフォーマンス向上）
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  // 全てのアニメーション対象を監視
+  document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    observer.observe(el);
+  });
+}
+
+// ページ読み込み完了後にアニメーション初期化
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initScrollAnimations);
+} else {
+  initScrollAnimations();
+}
+
+// ===== パララックス効果（軽量版） =====
+function initParallax() {
+  const parallaxElements = document.querySelectorAll('.SP .grassdsss, .SP.PC .grassdsss-2');
+  
+  if (parallaxElements.length === 0) return;
+  
+  let ticking = false;
+  
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const scrollY = window.pageYOffset;
+        parallaxElements.forEach(el => {
+          const speed = 0.3;
+          const yPos = scrollY * speed;
+          el.style.transform = `translateY(${yPos}px)`;
+        });
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+}
+
+// パララックス初期化
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initParallax);
+} else {
+  initParallax();
+}
