@@ -101,7 +101,6 @@ function scrollToTarget(targetElement, isPC) {
       block: 'start'
     });
     
-    // スクロールマージンを元に戻す
     setTimeout(() => {
       targetElement.style.scrollMarginTop = originalScrollMargin;
     }, 1000);
