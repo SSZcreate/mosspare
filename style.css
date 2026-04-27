@@ -845,6 +845,7 @@
   height: 63px;
   background-color: #ffffff;
   border-radius: 48.05px;
+  text-decoration: none;
 }
 
 .SP .frame-7 {
@@ -1768,6 +1769,7 @@
   height: 90px;
   background-color: #ffffff;
   border-radius: 69px;
+  text-decoration: none;
 }
 
 .SP .frame-13 {
@@ -2182,12 +2184,14 @@ a:hover {
 
 /* ホバーエフェクト - ボタン（box-shadowのみ使用） */
 .SP .group,
-.SP .frame-wrapper {
+.SP .frame-wrapper,
+.SP .group-30 {
   transition: box-shadow 0.3s ease;
 }
 
 .SP .group:hover,
-.SP .frame-wrapper:hover {
+.SP .frame-wrapper:hover,
+.SP .group-30:hover {
   box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
 }
 
